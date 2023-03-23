@@ -1,0 +1,20 @@
+FROM python
+ 
+
+RUN apt-get update   
+
+RUN apt-get install -y python3-pip  
+
+RUN pip3 install boto3    
+
+RUN pip install --upgrade pip
+
+         
+
+ 
+
+THEN RUN THESE COMMANDS
+docker build . -t week16
+
+docker run -it -d -v fully_qualified_path_to_directory:container_directory week16
+docker exec -it container_id ls -las /container_directory
